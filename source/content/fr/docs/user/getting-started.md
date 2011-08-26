@@ -1,42 +1,42 @@
 ---
-title: Getting started
+title: Pour commencer
 kind: content
 ---
 
-<h3>Make sure your project can build</h3>
+<h3>Pré-requis</h3>
 
-In order to build on Travis CI, your repository should have a Rakefile with the default task being a test task. That's it. Travis CI will first run `bundle install` if you have a Gemfile, and then `rake` by default. The build success is determined by the response code of that command.
+Votre dépot doit avoir un Rakefile dont la tâche par défault (`default`) est une tâche de test. C'est tout. Travis CI va exécuter `bundle install` si le projet a un Gemfile, puis `rake` par défaut.
 
-You can <a href="/docs/user/build-configuration/">configure</a> all aspects of this, including the <a href="/docs/user/database-setup/">database connection</a> if you need one.
+Vous pouvez <a href="/fr/docs/user/build-configuration/">configurer</a> tout cela, y compris les <a href="/fr/docs/user/database-setup/">connexions aux bases de données</a>.
 
-<h3>Sign in</h3>
+<h3>Se connecter</h3>
 
-To get started with Travis CI, sign in through Github OAuth. Go to <a href="http://travis-ci.org">Travis CI</a> and follow the sign in link.
+Connectez-vous avec Github en cliquant sur le lien `Sign in with Github` sur <a href="http://travis-ci.org">la page d'accueil de Travis CI</a>.
 
-Github will ask you for granting read- and write access. Travis CI needs write access for setting up service hooks for your repositories when you request it, but it won't touch anything else.
+Github va vous demander d'accorder à Travis CI des droits d'accès en lecture et en écriture. Travis CI a besoin d'accès en écriture seulement pour activer automatiquement les hooks quand vous configurez un projet, mais il ne touchera rien d'autre.
 
-<h3>Add service hooks</h3>
+<h3>Ajouter les hooks</h3>
 
-Once you're signed in go to your <a href="http://travis-ci.org/profile">profile page</a>. You'll see a list of your repositories. Flip the on/off switch for each repository that you want to hook up on Travis CI.
+Une fois connecté, allez sur <a href="http://travis-ci.org/profile">votre page de profil</a>. Vous y verrez une liste de vos dépots où vous pouvez activer les dépots que vous voulez tester avec Travis CI.
 
-Then visit the GitHub service hooks page for that project and paste your GitHub username and Travis token into the settings for the Travis service.
+Cliquez sur la clé pour visiter la page des hooks de votre projet Github. Vous pouvez y configurer l'utilisateur Github utilisé par Travis CI.
 
-<h3>What triggers the build process?</h3>
+<h3>Déclenchement d'une build</h3>
 
-To start a build you can either commit and push something to your repository, or you can go to your GitHub service hooks page and use the "Test Hook" button for Travis.
+Pour démarrer une build, vous pouvez soit pusher un commit vers votre dépot Github, ou aller sur la page des hooks sur Github et utiliser le bouton "Test Hook" dans les préférences du hook Travis.
 
-That should put a build job into the job queue on <a href="http://travis-ci.org">Travis CI</a> and your build will start as soon as a worker is available.
+Si tout va bien cela devrait insérer un job dans la file d'attente de <a href="http://travis-ci.org">Travis CI</a>. Votre build commencera dès qu'un worker sera disponible.
 
-<h3>Tweaking your build configuration</h3>
+<h3>Configurer votre build</h3>
 
-You can configure your build by adding a `.travis.yml` file to the root of your repository. See <a href="/docs/user/build-configuration/">Build Configuration</a> for details.
+Vous pouvez configurer votre build en ajouter un fichier `.travis.yml` à la racine de votre dépot. Voir <a href="/docs/user/build-configuration/">Configurer une build</a>.
 
-<h3>Databases, available infrastructure and more</h3>
+<h3>Plus de détails sur l'infrastructure disponible</h3>
 
-A Travis worker comes with a good amount of services you might depend on, including MySQL, PostgreSQL, MongoDB, memcached and others.
+Un worker contient un grand nombre de services utilisés couramment, comme MySQL, PostgreSQL, MongoDB, memcached et beaucoup d'autres.
 
-See <a href="/docs/user/database-setup/">Database setup</a> to learn how to configure a database connection for your test suite.
+Voir <a href="/fr/docs/user/database-setup/">Database setup</a> pour plus de détails sur la configuration d'une base de données pour votre suite de tests.
 
-<h3>Need help?</h3>
+<h3>Besoin d'aide ?</h3>
 
-For any kind of questions feel free to join our IRC channel <a href="irc://irc.freenode.net#travis">#travis on irc.freenode.net</a>! We're there to help :)
+Pour toutes questions, connectez vous sur notre channel IRC <a href="irc://irc.freenode.net#travis">#travis sur irc.freenode.net</a>. Attention, la plupart des contributeurs ne parlent pas français, présenter votre problème en anglais serait préférable.
